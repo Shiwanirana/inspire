@@ -42,10 +42,7 @@ export default class Weather {
           </div>
       
       <!-- <div>${this.time}</div> -->
-      <div class="weather-section">
-        <div class="compass">
-          <i id="arrow" class="fa fa-location-arrow" aria-hidden="true"></i>
-        </div>
+      
       </div>
     `;
   }

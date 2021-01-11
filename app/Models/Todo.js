@@ -9,8 +9,9 @@ export default class Todo {
 
     
     if (this.completed) {
-      return /*html*/ `
-  <div class="row  mb-2 bg-dark text-light">
+      return`
+      <div class="card bg-dark">
+  <div class="row  mb-2 bg-white text-dark">
     <div class="col-2">
       <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-check-square"></i></button>
     </div>
@@ -21,10 +22,12 @@ export default class Todo {
       <button onclick="app.todoController.removeTodo('${this.id}')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
     </div>
 </div>
+</div>
     `
     } else {
-      return /*html*/ `
-  <div class="row mb-2 bg-dark text-light">
+      return `
+      <div class="card bg-dark">
+  <div class="row mb-2 bg-light text-dark">
     <div class="col-2">
       <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-square"></i></button>
     </div>
@@ -32,8 +35,9 @@ export default class Todo {
       <h6 class="text-center">${this.description}</h6>
     </div>
     <div class="col-2">
-      <button onclick="app.todoController.removeTodo('${this.id}')" class="btn btn-danger"><i class="fas fa-minus-circle"></i></button>
+      <button onclick="app.todoController.removeTodo('${this.id}')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
     </div>
+</div>
 </div>
     `
     }
