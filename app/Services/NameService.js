@@ -5,8 +5,8 @@ import { saveState } from "../Utils/LocalStorage.js"
 class NameService{
 
   addName(newName){
-    let names = new Name(newName)
-    ProxyState.name.push(names)
+    let name = new Name(newName)
+    ProxyState.name= name
     console.log(ProxyState.name)
   }
   constructor(){

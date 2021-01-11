@@ -11,14 +11,11 @@ export default class Todo {
     if (this.completed) {
       return`
       <div class="card bg-dark">
-  <div class="row  mb-2 bg-white text-dark">
-    <div class="col-2">
-      <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-check-square"></i></button>
-    </div>
-    <div class="col-8">
-      <h6 class="strikeThrough text-center "><s>${this.description}</s></h6>
-    </div>
-    <div class="col-2">
+  <div class="row   bg-white text-dark">
+    <div class="col-4">
+    <input type="checkbox" ${this.completed?"checked":"" } class="form-check-input" name="itemCheck" onclick="app.todoController.toggleTodoStatus('${this.id}')" />
+      
+      <span><h6 class="text-center mx-0 px-0 "><s>${this.description}</s></h6></span>
       <button onclick="app.todoController.removeTodo('${this.id}')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
     </div>
 </div>
@@ -27,14 +24,11 @@ export default class Todo {
     } else {
       return `
       <div class="card bg-dark">
-  <div class="row mb-2 bg-light text-dark">
-    <div class="col-2">
-      <button onclick="app.todoController.toggleTodoStatus('${this.id}')" class="btn btn-success"><i class="fas fa-square"></i></button>
-    </div>
-    <div class="col-8">
-      <h6 class="text-center">${this.description}</h6>
-    </div>
-    <div class="col-2">
+  <div class="row  bg-light text-dark">
+    <div class="col-4">
+    <input type="checkbox" ${this.completed?"checked":"" } class="form-check-input" name="itemCheck" onclick="app.todoController.toggleTodoStatus('${this.id}')" />
+      
+      <span><h6 class="text-center">${this.description}</h6></span>
       <button onclick="app.todoController.removeTodo('${this.id}')" class="btn btn-danger"><i class="fas fa-trash"></i></button>
     </div>
 </div>

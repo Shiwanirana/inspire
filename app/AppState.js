@@ -22,9 +22,9 @@ class AppState extends EventEmitter {
     // /** @type {Clock} */
      clock = null
 
-     /**@type {Name[]} */
+     /**@type {Name} */
 
-     name=[]
+     name=null
 }
 
 export const ProxyState = new Proxy(new AppState(), {
