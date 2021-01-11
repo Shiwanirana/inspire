@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <title>Inspire</title>
+</head>
+
+<body class="container-fluid">
+    <header>
+        <div class="row mt-4 text-white ">
+                <div class="col-3 ml-4">
+                   <small> Links <span><i class="fas fa-search"></i></span></small>
+                </div>
+                <div class="col-4 text-center">
+                    <form onsubmit="app.nameController.addName(event)" class="w50 form-inline">
+                        <div class="input-group">
+                          <input type="text" name="name"class="form-control" placeholder="Name Please"/ required>
+                            <button class="btn btn-dark" type="submit">+</button>
+                        </div>
+                      </form>
+                </div>
+            <div class="col-4 mr-0 pr-0 text-right pointer" id="weather"></div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row text-center text-secondary mt-5">
+            <div class="col-8 display-2 text-right" id="greeting"></div>
+            <div class="col-2  display-1 text-left" id="name-here"></div>
+        </div>
+        <div class="row text-center text-danger">
+            <div onclick="app.clockController.currentTime1()" class="col display-2 pointer" id="clock"><b></b>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 mr-5 text-white"><h4>Total: <span class="mr-5" id="total-task"></span><span class="ml-5"> Remaining: </span><span id="complete-task"></span></h4></div>
+        <div class="col ml-5 pl-5 text-center">
+            <form onsubmit="app.todoController.addTodo(event)" class="w75 form-inline">
+                <div class="input-group mt-3 mb-1">
+                  <input type="text" name="description"class="form-control" placeholder="What is your main focus for today?"/ required>
+                    <button class="btn btn-dark" type="submit">+</button>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="row d-flex text-end">
+            <div class="col-4  text-white" id="todos">
+
+            </div>
+        </div>
+    
+    </main>
+    <footer class="container-fluid bg-transparent text-light">
+        <div class="row ">
+            <div class="col text-center pointer" id="quote" >
+                
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col text-center" id="quote-1"></div>
+        </div>
+        <div class="row mb-3">
+            <div class="col text-right">
+                <i class="fas fa-cog fa-2x pointer" data-toggle="modal" data-target="#new-settings"></i>
+                
+                <div class="modal" id="new-settings" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title text-dark">Color Theme:</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body text-center text-dark">
+                          <p><form action="">
+                            <label for="favcolor">Select your favorite color:</label>
+                            <input type="color" id="favcolor" name="favcolor" value="#ff0000"><br><br>
+                            <input type="submit">
+                          </form></p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
