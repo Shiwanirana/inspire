@@ -16,7 +16,9 @@ class WeatherService {
     ProxyState.weather.currentTemp = ProxyState.weather.convertTemp(ProxyState.weather.currentTemp.temp)
     ProxyState.weather = ProxyState.weather
     console.log(ProxyState.weather.currentTemp.temp)
-  }
+   
+    }
+    
 }
 
 const weatherService = new WeatherService();

@@ -52,8 +52,8 @@ export default class WeatherController {
     try {
       weatherService.getWeather()
     }
-    catch (e) {
-      console.error(e)
+    catch (error) {
+      console.error(error)
     }
   }
 

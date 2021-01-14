@@ -1,6 +1,5 @@
 export default class Weather {
   constructor(data) {
-    // console.log('[RAW WEATHER API DATA]', data);
    
     // this.time = new Date().toLocaleTimeString("en-US").split(/:| /)
     this.icon = data.weather[0].icon
@@ -12,7 +11,12 @@ export default class Weather {
     this.windSpeed = data.wind.speed
     
     this.currentTemp = this.convertTemp(this.kelvin)
+//     this.array = [this.kelvin,this.celsius,this.fahrenheit]
+// console.log(this.array)
   }
+
+  // REVIEW  u can do it with the ARRAY thing...i need to figure it out first..
+
 
   convertTemp(currentTemp) {
     let newTemp = null
@@ -29,6 +33,11 @@ export default class Weather {
       temp: newTemp,
       label: newTempLabel
     }
+    // let i = Math.floor(Math.random()*array.length)
+    // // for(let i=0;i<=array.length;i++){
+    // currentTemp=array[i]  
+    // return array[i]
+    //   console.log(array[i])
   }
 
   get Template() {
